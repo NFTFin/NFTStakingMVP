@@ -3,10 +3,11 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { Header } from '@/Containers/Header';
 import Counter from '@/Pages/Counter';
 import { StakingNFTList } from '@/Pages/StakingNFTList';
+import { StakingNFTDetail } from '@/Pages/StakingNFTDetail';
 
 function App() {
 	return (
-		<div>
+		<div className="h-screen flex flex-col">
 			<Header />
 			<Switch>
 				<Route path="/about">
@@ -18,8 +19,11 @@ function App() {
 				<Route path="/demo">
 					<Counter />
 				</Route>
-				<Route path="/StakingNFT">
+				<Route exact path="/StakingNFT">
 					<StakingNFTList />
+				</Route>
+				<Route exact path="/StakingNFT/:stakingId">
+					<StakingNFTDetail />
 				</Route>
 				<Redirect to="/StakingNFT" />
 			</Switch>
