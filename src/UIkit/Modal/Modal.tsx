@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect } from 'react';
+import React, { forwardRef, useCallback, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
 interface DialogProps {
@@ -30,10 +30,13 @@ const Modal = forwardRef<HTMLDivElement, DialogProps>((props: DialogProps, ref) 
 		}
 	}, [visible]);
 
-	const handleKeyDown = (e: KeyboardEvent) => {
-		if (e.keyCode === 13) onPressEnter(e);
-		else if (e.keyCode === 27) onPressEsc(e);
-	};
+	const handleKeyDown = useCallback(
+		(e: KeyboardEvent) => {
+			if (e.keyCode === 13) onPressEnter(e);
+			else if (e.keyCode === 27) onPressEsc(e);
+		},
+		[onPressEnter, onPressEsc]
+	);
 
 	useEffect(() => {
 		if (visible) {
@@ -44,7 +47,7 @@ const Modal = forwardRef<HTMLDivElement, DialogProps>((props: DialogProps, ref) 
 		return () => {
 			document.removeEventListener('keydown', handleKeyDown);
 		};
-	}, [visible]);
+	}, [visible, handleKeyDown]);
 
 	if (typeof window === 'undefined') {
 		return null;

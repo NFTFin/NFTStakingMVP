@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import { Counter } from '@/Containers/Counter';
+import { Counter } from '@/Widgets/Counter';
 import './App.css';
 
 function App() {

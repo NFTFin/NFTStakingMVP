@@ -29,10 +29,28 @@ module.exports = {
 						opacity: 0,
 					},
 				},
+				// unfoldDown: {
+				// 	from: {
+				// 		maxHeight: '0',
+				// 	},
+				// 	to: {
+				// 		maxHeight: 'auto',
+				// 	},
+				// },
+				// foldUp: {
+				// 	from: {
+				// 		maxHeight: 'auto',
+				// 	},
+				// 	to: {
+				// 		maxHeight: '0px',
+				// 	},
+				// },
 			},
 			animation: {
 				zoomIn: 'zoomIn 0.3s ease-in-out',
 				fadeOut: 'fadeOut 0.3s ease-in-out',
+				// unfoldDown: 'unfoldDown 1s ease-in-out',
+				// foldUp: 'foldUp 1s ease-in-out',
 			},
 		},
 	},
