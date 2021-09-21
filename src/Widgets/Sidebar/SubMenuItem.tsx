@@ -6,7 +6,6 @@ import { MenuItem } from './MenuItem';
 
 export const SubMenuItem: React.FC<SubMenuItemType> = ({ label, icon, children }) => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
-	const [isShow, setIsShow] = useState<boolean>(false);
 	const handleToggle = useCallback(() => {
 		setIsOpen(prev => !prev);
 	}, []);

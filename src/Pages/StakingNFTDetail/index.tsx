@@ -1,9 +1,9 @@
 import React, { FC, memo } from 'react';
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 
 export const StakingNFTDetail: FC = memo(() => {
-	const params = useParams<{ stakingId: string }>();
-	const { stakingId } = params;
+	// const params = useParams<{ stakingId: string }>();
+	// const { stakingId } = params;
 	const coverImage =
 		'https://lh3.googleusercontent.com/907ToYu7jU7wuoMXXmZiIpV4_4SUiaogCWsUKXuQOKg8XsX65U8G0CSlg1g-zDvH74EK3iUarKUntn4FblZGPzQlt7b6Rm3zD-k68cI=w356';
 	const name = 'Cunning Fox 2627';
@@ -16,7 +16,7 @@ export const StakingNFTDetail: FC = memo(() => {
 				<div className="w-2/5 flex flex-col px-4 flex-1">
 					{/* image */}
 					<div className="w-full border border-gray-200 p-4 rounded-xl">
-						<img className="w-full" src={coverImage} />
+						<img alt="nft" className="w-full" src={coverImage} />
 					</div>
 
 					{/* description */}

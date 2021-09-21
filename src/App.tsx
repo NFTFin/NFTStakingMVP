@@ -14,7 +14,7 @@ function App() {
 				<Header />
 				<div className="flex-grow flex overflow-hidden">
 					<Sidebar />
-					<div className="h-full flex-grow overflow-y-auto">
+					<div className="h-full flex-grow flex-shrink overflow-y-auto">
 						<Switch>
 							<Route path="/about">
 								<div>about</div>
