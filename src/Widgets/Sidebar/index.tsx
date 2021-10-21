@@ -5,7 +5,7 @@ import config from './config';
 
 export const Sidebar: React.FC = () => {
 	return (
-		<div className="h-full w-60 border-r border-gray-300 bg-gray-50">
+		<div className="h-full w-60 border-r border-gray-300 bg-gray-50 pt-1">
 			{config.map(cfg => {
 				if (cfg.children) {
 					return <SubMenuItem key={cfg.label} {...cfg} />;

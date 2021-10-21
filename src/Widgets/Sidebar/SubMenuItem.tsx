@@ -15,10 +15,10 @@ export const SubMenuItem: React.FC<SubMenuItemType> = ({ label, icon, children }
 	return (
 		<div>
 			<div
-				className="h-10 flex-shrink-0 w-full px-6 flex items-center cursor-pointer hover:bg-gray-100"
+				className="h-12 flex-shrink-0 w-full px-6 flex items-center cursor-pointer hover:bg-gray-100"
 				onClick={handleToggle}>
-				<div className="h-6 w-6 mr-3">{icon}</div>
-				<span className="font-medium text-xl text-black">{label}</span>
+				<div className="h-5 w-5 mr-3">{icon}</div>
+				<span className="font-medium text-base text-black">{label}</span>
 			</div>
 			<div
 				className={childrenCls}

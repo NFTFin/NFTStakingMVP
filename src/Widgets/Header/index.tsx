@@ -8,7 +8,7 @@ export const Header: FC = memo(() => {
 		dispatch(showWalletModalVisible());
 	}, [dispatch]);
 	return (
-		<header className="flex w-full h-16 shadow flex-shrink-0">
+		<header className="flex w-full h-16 shadow flex-shrink-0 z-20">
 			<div className="grid grid-cols-3 w-full h-full items-center">
 				<div className="justify-self-start"> Logo </div>
 				<div className="justify-self-center"> Menu </div>
